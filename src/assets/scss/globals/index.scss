@@ -1,0 +1,35 @@
+html, body, #app {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#alert-status {
+  @extend %flexbox;
+  @include box-shadow(3px, 3px, 0px, 0px, rgba(50, 50, 50, 0.05));
+  @include flex-flow(row nowrap);
+  @include align-items(center);
+  position: fixed;
+  top: 20px; left: 0;
+  padding: 10px 20px;
+  background: white;
+}
+
+.yellow_status, .red_status, .green_status {
+  display: inline-block;
+  height: 10px; width: 10px;
+  border-radius: 100%;
+  margin-right: 10px;
+}  .yellow_status{
+  background-color: orange;
+}  .red_status{
+  background-color: $cRed;
+}  .green_status{
+  background-color: $cGreen;
+}
+
+input{
+  border: none;
+}
